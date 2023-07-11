@@ -12,9 +12,9 @@ export const ProductInfo = ({
   const item = { product, size: size, quantity: 1 };
 
   return (
-    <div className="">
-      <h2 className="">
-        <span className="">{product.name}</span>
+    <div className="flex flex-col gap-5 p-5">
+      <h2 className="text-3xl flex justify-between">
+        <span className="w-1/2">{product.name}</span>
         <span>${product.price}</span>
       </h2>
       <RatingAverage reviews={product.reviews} />

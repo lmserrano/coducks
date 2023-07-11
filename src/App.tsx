@@ -11,11 +11,12 @@ function App({ product, user }: { product: Product; user: User }) {
     <div>
       <Header />
 
-      <main className="">
+      <main className="grid grid-cols-2 gap-2">
+        <Images images={product.images} />
         <ProductInfo product={product} addToCart={addToCart} />
       </main>
 
-      <footer className="">
+      <footer className="text-center p-5">
         Made with ♥ in&nbsp;
         <a href="https://codux.com">Codux</a>
         &nbsp;with&nbsp;

@@ -5,5 +5,8 @@ import { RUBBER_DUCKY, SCROOGE } from '../../data';
 
 export default createBoard({
     name: 'App',
-    Board: () => <App product={RUBBER_DUCKY} user={SCROOGE} />
+    Board: () => <App product={RUBBER_DUCKY} user={SCROOGE} />,
+    environmentProps: {
+        windowWidth: 1024
+    }
 });
