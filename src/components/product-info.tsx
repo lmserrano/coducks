@@ -1,5 +1,6 @@
 import { RatingAverage } from "./reviews";
 import type { CartItem, Product } from "../types";
+import * as Accordion from '@radix-ui/react-accordion';
 
 export const ProductInfo = ({
   product,
@@ -26,7 +27,14 @@ export const ProductInfo = ({
         </button>
       </div>
 
-      <p>{product.description}</p>
+      <InfoAccordion product={product} />
     </div>
   );
 };
+
+const InfoAccordion = ({product}: {product: Product}) => {
+  <Accordion.Root className="" type"multiple" defaultValue="item-1" collapsible>
+
+  return <p>{product.description}</p>
+  </Accordion.Root>
+}
